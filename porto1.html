@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="font-mono">
+  <div class="container mt-10">
+    <h1 class="text-3xl text-center mb-5 font-bold">Build A Reflection API Project</h1>
+      <div class="w-full mb-10">
+        <div class="max-w-3xl mx-auto">
+          <img src="dist/porto/1.png" alt="">
+        </div>
+        <h2 class="text-2xl my-3 font-semibold text-primary">Description</h2>
+        <p class="text-lg">Build a Reflection back end application that is used to record and measure achievement targets.</p>
+
+        <h2 class="text-2xl my-3 font-semibold text-primary">Requirements</h2>
+        <ul class="list-disc px-5 text-base">
+          <li class="mb-3">Create Rest API using NodeJS, ExpressJS with Postgres database and also implement authentication with JWT.</li>
+          <li class="mb-3">Use SQL queries to store, modify and retrieve data using the Postgres database.</li>
+          <li class="mb-3">Each user can only CRUD (Create, Read, Update, Delete) their own reflection data.</li>
+        </ul>
+        <h2 class="text-2xl my-3 font-semibold text-primary">Endpoint Rest API</h2>
+        <ul class="list-disc px-5 text-base">
+          <li class="mb-3">Endpoint for user registration <span class="font-semibold">POST /api/v1/users/register</span></li>
+          <li class="mb-3">Endpoint for user login process <span class="font-semibold">POST /api/v1/users/login</span></li>
+          <li class="mb-3">Endpoint for users to create reflection data <span class="font-semibold">POST /api/v1/reflections</span></li>
+          <li class="mb-3">Endpoint for users to get all their own reflection data <span class="font-semibold">GET /api/v1/reflections</span></li>
+          <li class="mb-3">Endpoint for users to update all their own reflection data <span class="font-semibold">PUT /api/v1/reflections/:userId</span></li>
+          <li >Endpoint for users to delete all their own reflection data <span class="font-semibold">DELETE /api/v1/reflections/:userId</span></li>
+        </ul>
+
+        <button class="py-2 px-5 rounded-3xl mt-5 bg-primary text-white hover:bg-teal-600 transition duration-500">GitHub Link
+        </button>
+      </div>
+  </div>
+
+  <footer class="bg-slate-800 py-5">
+    <p class="text-center text-white">
+      Made with ❤️ by <span class="text-primary">
+        Fori Okto Pakpahan
+      </span>
+    </p>
+  </footer>
+</body>
+</html>
