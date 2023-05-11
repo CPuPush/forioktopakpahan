@@ -13,6 +13,7 @@
         <div class="max-w-3xl mx-auto">
           <img class="rounded-lg" src="dist/porto/1.png" alt="">
         </div>
+
         <h2 class="text-2xl my-3 font-semibold text-primary">Description</h2>
         <p class="text-lg">MyGram application is a back end application that aims to store photos, make comments on other people's photos like social media.</p>
         <!-- ! Start Requirements -->
@@ -20,13 +21,15 @@
         <ul class="list-disc px-5 text-base">
           <li class="mb-3">This project uses Sequelize ORM with Postgresql database.</li>
           <li class="mb-3">MyGram uses libraries/packages including jsonwebtoken, bcypt, dotenv, express, sequelize, sequelize-cli, and pg.</li>
-          <li class="mb-3">Each user can only CRUD (Create, Read, Update, Delete) their own reflection data.</li>
-          <li>This project has 4 tables, the following are the tables and fields in this project:</li>
+          <li class="mb-3">Each user can only CRUD (Create, Read, Update, Delete) their own data.</li>
+          <li class="mb-3">Endpoints to access data in the table must go through an authentication process first, and the authentication process uses JsonWebToken.</li>
+          <li class="mb-3">endpoints to modify ownership data such as update or delete first through an authorization process.</li>
+          <li>The following are the tables and fields in this project:</li>
           <div class="mt-3">
             <div id="accordion-collapse" data-accordion="collapse">
               <!-- ? User -->
               <h2 id="accordion-collapse-heading-1">
-                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-700" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
                   <span>User</span>
                   <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
@@ -48,7 +51,7 @@
               </div>
               <!-- ? Photo -->
               <h2 id="accordion-collapse-heading-2">
-                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-700" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
                   <span>Photo</span>
                   <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
@@ -68,7 +71,7 @@
               </div>
               <!-- ?Comment -->
               <h2 id="accordion-collapse-heading-3">
-                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-700" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
                   <span>Comment</span>
                   <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
@@ -85,8 +88,9 @@
                   </div>
                 </div>
               </div>
+              <!-- ? SocialMedia -->
               <h2 id="accordion-collapse-heading-4">
-                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:text-gray-400 hover:bg-gray-700" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
                   <span>SocialMedia</span>
                   <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
@@ -109,23 +113,141 @@
           </div>
         </ul>
         <!-- ! End Requirements -->
-        <h2 class="text-2xl my-3 font-semibold text-primary">Endpoint Rest API</h2>
-        <ul class="list-disc px-5 text-base">
-          <li class="mb-3">Endpoint for user registration <span class="font-semibold">POST /api/v1/users/register</span></li>
-          <li class="mb-3">Endpoint for user login process <span class="font-semibold">POST /api/v1/users/login</span></li>
-          <li class="mb-3">Endpoint for users to create reflection data <span class="font-semibold">POST /api/v1/reflections</span></li>
-          <li class="mb-3">Endpoint for users to get all their own reflection data <span class="font-semibold">GET /api/v1/reflections</span></li>
-          <li class="mb-3">Endpoint for users to update all their own reflection data <span class="font-semibold">PUT /api/v1/reflections/:userId</span></li>
-          <li >Endpoint for users to delete all their own reflection data <span class="font-semibold">DELETE /api/v1/reflections/:userId</span></li>
-        </ul>
 
+        <h2 class="text-2xl my-3 font-semibold text-primary">Endpoint Rest API</h2>
+        <div class="pl-4 pr-7">
+
+          <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+            <h2 id="accordion-flush-heading-1">
+              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                <span>User</span>
+                <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  <div class="px-4">
+
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">POST /users/register</span> for users registration
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">POST /users/login</span> for users login
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">PUT /users/:userId</span> for users to update their own data 
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">DELETE /users/:userId</span> for users to delete their own data 
+                    </li>
+
+                  </div>
+                </p>
+              </div>
+            </div>
+
+            <h2 id="accordion-flush-heading-2">
+              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                <span>Photo</span>
+                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  <div class="px-4">
+
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">POST /photos</span> for users to upload their own photos data
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">GET /photos</span> for users to get their own photos data with comments from other users
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">PUT /photos/:photoId</span> for users to update their own photo data.
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">DELETE /photos/:photoId</span> for users to delete their own photo data.
+                    </li>
+
+                  </div>
+                </p>
+              </div>
+            </div>
+            
+            <h2 id="accordion-flush-heading-3">
+              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                <span>Comment</span>
+                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  <div class="px-4">
+
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">POST /comments</span> for users post comment to other users'photos data
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">GET /comments</span> for users get comments from their photos data from other users
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">PUT /comments/:commentId</span> for users update their comments to other people's photos data
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">DELETE /comments/:commentId</span> for users delete their comments to other people's photos data
+                    </li>
+                  </div>
+                </p>
+              </div>
+            </div>
+
+
+            <h2 id="accordion-flush-heading-4">
+              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                <span>SocialMedia</span>
+                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+
+            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  <div class="px-4">
+
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">POST /socialmedias</span> for users to post their own social media data
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">GET /socialmedias</span> for users to get their own social media with user data
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">PUT /socialmedias</span> for users to update their own social media data
+                    </li>
+                    <li class="mb-3">Endpoint 
+                      <span class="font-bold">DELETE /socialmedias/:socialMediaId</span> for users to delete their own social media data
+                    </li>
+
+                  </div>
+                </p>
+                <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                  <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+                  <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
         <a href="https://github.com/CPuPush/FINALPROJECTclass=">
-          <button class="py-2 px-5 rounded-3xl mt-5 bg-primary text-white hover:bg-teal-600 transition duration-500">GitHub Link
+          <button class="py-2 px-5 rounded-3xl my-5 bg-primary text-white hover:bg-teal-600 transition duration-500">GitHub Link
           </button>
         </a>
       </div>
-  </div>
-
+    </div>
   <footer class="bg-slate-800 py-5">
     <p class="text-center text-white">
       Made with ❤️ by <span class="text-primary">
